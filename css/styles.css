@@ -1,200 +1,136 @@
-/* * * * * * * * * 
- * CSS Variables *
- * * * * * * * * */
-:root {
-    --background-color: #fff;
-    --text-color: #000;
-    --main-color: #444;
-    --highlight-color: #666;
-    --nav-link-color: #fff;
-    --footer-background-color: #444;
-}
-
-/* * * * * * * * * * * * 
- *  Tag Global Styles  *
- * * * * * * * * * * * */
-
-html {
-    height: 100%;
-    width: 100%;
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
-/* Apply some styles to the entire page */
-html,
-body {
-    /* Change the font */
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    height: 100%;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--text-color);
+body
+{
+    min-height: 100vh;
+    background:linear-gradient(#2b1055,#7597de);
+    overflow-x: hidden;
 }
-
-/*
- * You'd be surprised by how just
- * a little boldness and text
- * styles can make your website
- * look instantly better! */
-h1,
-h2 {
-    font-weight: 700;
-    font-size: 36px;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--main-color);
-}
-
-p {
-    font-size: 18px;
-}
-
-a {
-    color: var(--main-color);
-}
-
-a:hover {
-    color: var(--highlight-color);
-}
-
-/* * * * * * * * * * * * * 
- *  Bootstrap Overrides  *
- * * * * * * * * * * * * */
-
-/* Make the navbar pretty */
-.navbar {
+header
+{
     position: absolute;
-    z-index: 1;
-}
-
-.navbar .navbar-brand {
-    margin-left: 60px;
-    margin-right: 80px;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--nav-link-color);
-}
-
-.navbar .navbar-brand:hover {
-    color: var(--main-color);
-    transition: 0.25s all;
-}
-
-.navbar .navbar-nav .nav-link {
-    color: var(--nav-link-color);
-    margin-right: 30px;
-    font-size: 18px;
-    transition: 0.25s all;
-}
-
-.navbar .navbar-nav .nav-link:hover {
-    color: var(--main-color);
-    transition: 0.25s all;
-}
-
-/* * * * * * * * * * * * * *
- *  Custom Global Classes  *
- * * * * * * * * * * * * * */
-
-.btn-accent {
-    color: var(--background-color);
-    background-color: var(--main-color);
-}
-
-.btn-accent:hover {
-    background-color: var(--highlight-color);
-}
-
-/* * * * * * * * * * *
- *  Content Styles   *
- * * * * * * * * * * */
-
-/* Hero section */
-#hero {
-    /* define spacing and sizing here */
-    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80%;
-    margin-bottom: 50px;
-}
-
-#hero > div {
-    /* Replace the URL with your own image */
-    background: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url(https://news.usc.edu/files/2016/06/GR42877_web.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-#hero > div > .text {
-    /* Horizontal + Vertical center */
-    color: var(--background-color);
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* About section */
-#about {
-    margin-bottom: 50px;
-}
-
-#blurb {
-    margin-bottom: 50px;
-}
-
-/* Skills section */
-#skills {
-    margin-bottom: 50px;
-}
-
-#skills .row {
+    padding: 30px 100px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: solid;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-/* Gallery section */
-#gallery {
-    margin-bottom: 50px;
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
 }
-
-/* Contact section */
-#contact {
-    margin-bottom: 50px;
-}
-
-footer {
-    text-align: center;
-    padding: 50px;
-    color: var(--background-color);
-    background: var(--footer-background-color);
-}
-
-footer a, footer a:hover {
-    color: var(--background-color);
+header ul li a
+{
     text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
 }
-
-/* Responsiveness */
-@media only screen and (max-width: 600px) {
-    h1,
-    h2 {
-        font-size: 28px;
-    }
-
-    .navbar-brand {
-        margin-left: 0;
-        font-size: 28px;
-    }
+header ul li a:hover,
+header ul li a:active
+{
+    background:#fff;
+    color: #2b1055;
 }
-
-@media only screen and (max-width: 360px) {
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+    z-index: 10;
+}
+#text
+{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    right: -350px;
+}
+#btn 
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background:#fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+.sec h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec p
+{
+    font-size: 1em;
+    color: #fff;
 }
